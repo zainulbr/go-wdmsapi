@@ -14,20 +14,20 @@ type DeviceParams struct {
 }
 
 type DeviceData struct {
-	Status           string `json:"status"`
-	DeviceName       string `json:"deviceName"`
-	FaceCount        int    `json:"faceCount"`
-	DepartmentName   string `json:"departmentName"`
-	ZoneNumber       int    `json:"zoneNumber"`
-	CmdCount         int    `json:"cmdCount"`
-	TransactionCount int    `json:"transactionCount"`
-	Alias            string `json:"alias"`
-	FpCount          int    `json:"fpCount"`
-	LastActivity     string `json:"lastActivity"`
-	SN               string `json:"sn"`
-	ZoneName         string `json:"zoneName"`
-	FirmwareVersion  string `json:"firmwareVersion"`
-	UserCount        int    `json:"userCount"`
+	Status           string `json:"status" schema:"status,omitempty"`
+	DeviceName       string `json:"deviceName" schema:"deviceName,omitempty"`
+	FaceCount        int    `json:"faceCount" schema:"faceCount,omitempty"`
+	DepartmentName   string `json:"departmentName" schema:"departmentName,omitempty"`
+	ZoneNumber       int    `json:"zoneNumber" schema:"zoneNumber,omitempty"`
+	CmdCount         int    `json:"cmdCount" schema:"cmdCount,omitempty"`
+	TransactionCount int    `json:"transactionCount" schema:"transactionCount,omitempty"`
+	Alias            string `json:"alias" schema:"alias,omitempty"`
+	FpCount          int    `json:"fpCount" schema:"fpCount,omitempty"`
+	LastActivity     string `json:"lastActivity" schema:"lastActivity,omitempty"`
+	SN               string `json:"sn" schema:"sn,omitempty"`
+	ZoneName         string `json:"zoneName" schema:"zoneName,omitempty"`
+	FirmwareVersion  string `json:"firmwareVersion" schema:"firmwareVersion,omitempty"`
+	UserCount        int    `json:"userCount" schema:"userCount,omitempty"`
 }
 
 type DeviceRecord struct {

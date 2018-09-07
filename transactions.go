@@ -25,21 +25,21 @@ type TransactionsParams struct {
 }
 
 type TransactionsData struct {
-	CheckTime       string    `json:"checkTime" bson:"-"`
-	CheckTimeParsed time.Time `json:"-" bson:"check_time"`
-	Resrved         string    `json:"reserved" bson:"reserved"`
-	Name            string    `json:"name" bson:"name"`
-	PIN             string    `json:"pin" bson:"pin"`
-	CheckTYpe       string    `json:"checkType" bson:"check_type"`
-	ZoneNumber      int       `json:"zoneNumber" bson:"zone_number"`
-	WorkCode        string    `json:"workCode" bson:"work_code"`
-	VerifyCode      int       `json:"verifyCode" bson:"verify_code"`
-	SN              string    `json:"SN" bson:"sn"`
-	ID              int       `json:"id" bson:"id"`
-	TransactionPic  string    `json:"transactionPic" bson:"transaction_pic"`
-	ZoneName        string    `json:"zoneName" bson:"zone_name" `
-	Synced          bool      `json:"-" bson:"synced" `
-	Subdomain       string    `json:"-" bson:"subdomain" `
+	CheckTime       string    `json:"checkTime" bson:"-" schema:"-"`
+	CheckTimeParsed time.Time `json:"check_time" bson:"check_time" schema:"-"`
+	Resrved         string    `json:"reserved" bson:"reserved" schema:"-"`
+	Name            string    `json:"name" bson:"name" schema:"-"`
+	PIN             string    `json:"pin" bson:"pin" schema:"pin"`
+	CheckTYpe       string    `json:"checkType" bson:"check_type" schema:"-"`
+	ZoneNumber      int       `json:"zoneNumber" bson:"zone_number" schema:"zoneNumber"`
+	WorkCode        string    `json:"workCode" bson:"work_code" schema:"-"`
+	VerifyCode      int       `json:"verifyCode" bson:"verify_code" schema:"-"`
+	SN              string    `json:"SN" bson:"sn" schema:"SN"`
+	ID              int       `json:"id" bson:"id" schema:"id"`
+	TransactionPic  string    `json:"transactionPic" bson:"transaction_pic" schema:"-"`
+	ZoneName        string    `json:"zoneName" bson:"zone_name"  schema:"-"`
+	Synced          bool      `json:"synced" bson:"synced"  schema:"-"`
+	Subdomain       string    `json:"subdomain" bson:"subdomain"  schema:"-"`
 }
 
 type TransactionsRecords struct {

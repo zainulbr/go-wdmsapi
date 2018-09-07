@@ -19,6 +19,7 @@ type EmployeeData struct {
 	Password         string `json:"password"`
 	FaceCount        int    `json:"faceCount"`
 	FPCount          int    `json:"fpCount"`
+	SN               string `json:"sn,omitempty"`
 	DepartmentName   string `json:"departmentName"`
 	ZoneName         string `json:"zoneName"`
 }
