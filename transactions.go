@@ -29,15 +29,16 @@ type TransactionsData struct {
 	CheckTimeParsed time.Time `json:"check_time" bson:"check_time" schema:"-"`
 	Resrved         string    `json:"reserved" bson:"reserved" schema:"-"`
 	Name            string    `json:"name" bson:"name" schema:"-"`
-	PIN             string    `json:"pin" bson:"pin" schema:"pin"`
+	PIN             string    `json:"pin" bson:"pin" schema:"pin,omitempty"`
 	CheckTYpe       string    `json:"checkType" bson:"check_type" schema:"-"`
-	ZoneNumber      int       `json:"zoneNumber" bson:"zone_number" schema:"zoneNumber"`
+	ZoneNumber      int       `json:"zoneNumber" bson:"zone_number" schema:"zoneNumber,omitempty"`
 	WorkCode        string    `json:"workCode" bson:"work_code" schema:"-"`
 	VerifyCode      int       `json:"verifyCode" bson:"verify_code" schema:"-"`
-	SN              string    `json:"SN" bson:"sn" schema:"SN"`
-	ID              int       `json:"id" bson:"id" schema:"id"`
+	SN              string    `json:"SN" bson:"sn" schema:"SN,omitempty"`
+	ID              int       `json:"id" bson:"id" schema:"id,omitempty"`
 	TransactionPic  string    `json:"transactionPic" bson:"transaction_pic" schema:"-"`
 	ZoneName        string    `json:"zoneName" bson:"zone_name"  schema:"-"`
+	SyncFlag        *bool     `json:"-" bson:"-"  schema:"synced,omitempty"`
 	Synced          bool      `json:"synced" bson:"synced"  schema:"-"`
 	Subdomain       string    `json:"subdomain" bson:"subdomain"  schema:"-"`
 }
