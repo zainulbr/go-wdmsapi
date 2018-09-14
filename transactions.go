@@ -25,22 +25,22 @@ type TransactionsParams struct {
 }
 
 type TransactionsData struct {
-	CheckTime       string    `json:"checkTime" bson:"-" schema:"-"`
-	CheckTimeParsed time.Time `json:"check_time" bson:"check_time" schema:"-"`
-	Resrved         string    `json:"reserved" bson:"reserved" schema:"-"`
-	Name            string    `json:"name" bson:"name" schema:"-"`
-	PIN             string    `json:"pin" bson:"pin" schema:"pin,omitempty"`
-	CheckTYpe       string    `json:"checkType" bson:"check_type" schema:"-"`
-	ZoneNumber      int       `json:"zoneNumber" bson:"zone_number" schema:"zoneNumber,omitempty"`
-	WorkCode        string    `json:"workCode" bson:"work_code" schema:"-"`
-	VerifyCode      int       `json:"verifyCode" bson:"verify_code" schema:"-"`
-	SN              string    `json:"SN" bson:"sn" schema:"SN,omitempty"`
-	ID              int       `json:"id" bson:"id" schema:"id,omitempty"`
-	TransactionPic  string    `json:"transactionPic" bson:"transaction_pic" schema:"-"`
-	ZoneName        string    `json:"zoneName" bson:"zone_name"  schema:"-"`
-	SyncFlag        *bool     `json:"-" bson:"-"  schema:"synced,omitempty"`
-	Synced          bool      `json:"synced" bson:"synced"  schema:"-"`
-	Subdomain       string    `json:"subdomain" bson:"subdomain"  schema:"-"`
+	CheckTime       string    `json:"checkTime,omitempty" bson:"-,omitempty" schema:"-"`
+	CheckTimeParsed time.Time `json:"check_time,omitempty" bson:"check_time,omitempty" schema:"-"`
+	Resrved         string    `json:"reserved,omitempty" bson:"reserved,omitempty" schema:"-"`
+	Name            string    `json:"name,omitempty" bson:"name,omitempty" schema:"-"`
+	PIN             string    `json:"pin,omitempty" bson:"pin,omitempty" schema:"pin,omitempty"`
+	CheckTYpe       string    `json:"checkType,omitempty" bson:"check_type,omitempty" schema:"-"`
+	ZoneNumber      int       `json:"zoneNumber,omitempty" bson:"zone_number,omitempty" schema:"zoneNumber,omitempty"`
+	WorkCode        string    `json:"workCode,omitempty" bson:"work_code,omitempty" schema:"-"`
+	VerifyCode      int       `json:"verifyCode,omitempty" bson:"verify_code,omitempty" schema:"-"`
+	SN              string    `json:"SN,omitempty" bson:"sn,omitempty" schema:"SN,omitempty"`
+	ID              int       `json:"id,omitempty" bson:"id,omitempty" schema:"id,omitempty"`
+	TransactionPic  string    `json:"transactionPic,omitempty" bson:"transaction_pic,omitempty" schema:"-"`
+	ZoneName        string    `json:"zoneName,omitempty" bson:"zone_name,omitempty" schema:"-"`
+	SyncFlag        *bool     `json:"-" bson:"-" schema:"synced,omitempty"`
+	Synced          bool      `json:"synced,omitempty" bson:"synced,omitempty" schema:"-"`
+	Subdomain       string    `json:"subdomain,omitempty" bson:"subdomain,omitempty" schema:"-"`
 }
 
 type TransactionsRecords struct {
